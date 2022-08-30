@@ -39,7 +39,6 @@ class ExerciseActivity : AppCompatActivity(), TextToSpeech.OnInitListener {
         supportActionBar?.let {
             supportActionBar?.setDisplayHomeAsUpEnabled(true)
         }
-
         binding?.toolbarExercise?.setNavigationOnClickListener {
             onBackPressed()
         }
@@ -125,6 +124,7 @@ class ExerciseActivity : AppCompatActivity(), TextToSpeech.OnInitListener {
                     setupRestView()
                 } else {
                     val intent = Intent(this@ExerciseActivity, FinishActivity::class.java)
+                    finish()
                     startActivity(intent)
                 }
             }

@@ -18,12 +18,11 @@ class FinishActivity : AppCompatActivity() {
         }
 
         binding?.toolbarFinish?.setNavigationOnClickListener{
-            onBackPressed()
+            finish()
         }
 
         binding?.finishButton?.setOnClickListener {
-            val intent = Intent(this@FinishActivity, MainActivity::class.java)
-            startActivity(intent)
+            finish()
         }
 
     }
