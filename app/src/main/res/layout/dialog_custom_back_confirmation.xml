@@ -35,6 +35,7 @@
             >
             <Button
                 android:id="@+id/yesBtn"
+                android:background="@drawable/button_background"
                 android:layout_width="150sp"
                 android:layout_height="wrap_content"
                 android:text="@string/yes"
@@ -43,6 +44,7 @@
             <Button
                 android:id="@+id/noBtn"
                 android:layout_width="150sp"
+                android:background="@drawable/button_background"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="40dp"
                 android:text="@string/no" />
