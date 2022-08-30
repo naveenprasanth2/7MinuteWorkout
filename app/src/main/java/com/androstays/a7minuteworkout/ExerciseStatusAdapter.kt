@@ -2,6 +2,7 @@ package com.androstays.a7minuteworkout
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
 import com.androstays.a7minuteworkout.databinding.ItemExerciseStatusBinding
 
@@ -26,6 +27,27 @@ class ExerciseStatusAdapter(val items: ArrayList<ExerciseModel>) :
         val model: ExerciseModel = items[position]
         holder.tvItem.text = model.getId().toString()
 
+        when {
+            model.getIsSelected() -> {
+                holder.tvItem.background = ContextCompat.getDrawable(
+                    holder.itemView.context,
+                    R.drawable.item_circular_thin_color_yellow_border
+                )
+
+            }
+            model.getIsCompleted() -> {
+                holder.tvItem.background = ContextCompat.getDrawable(
+                    holder.itemView.context,
+                    R.drawable.item_circular_thin_color_accent_border
+                )
+            }
+            else -> {
+                holder.tvItem.background = ContextCompat.getDrawable(
+                    holder.itemView.context,
+                    R.drawable.item_circular_color_gray_background
+                )
+            }
+        }
     }
 
     override fun getItemCount(): Int {
