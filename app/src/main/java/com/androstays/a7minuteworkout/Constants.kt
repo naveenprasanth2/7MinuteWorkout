@@ -32,7 +32,7 @@ object Constants {
             )
         val squat =
             ExerciseModel(
-                6, "Step on to chair", R.drawable.ic_squat, isCompleted = false,
+                6, "Squat", R.drawable.ic_squat, isCompleted = false,
                 isSelected = false
             )
         val tricepsDripOnChair = ExerciseModel(
