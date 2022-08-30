@@ -1,5 +1,6 @@
 package com.androstays.a7minuteworkout
 
+import android.app.Dialog
 import android.content.Intent
 import android.media.MediaPlayer
 import android.net.Uri
@@ -11,6 +12,7 @@ import android.util.Log
 import android.view.View
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.androstays.a7minuteworkout.databinding.ActivityExerciseBinding
+import com.androstays.a7minuteworkout.databinding.DialogCustomBackConfirmationBinding
 import java.util.*
 import kotlin.collections.ArrayList
 
@@ -40,8 +42,9 @@ class ExerciseActivity : AppCompatActivity(), TextToSpeech.OnInitListener {
             supportActionBar?.setDisplayHomeAsUpEnabled(true)
         }
         binding?.toolbarExercise?.setNavigationOnClickListener {
-            onBackPressed()
+           customDialogForBackButton()
         }
+
         tts = TextToSpeech(this, this)
         exerciseList = Constants.defaultExerciseList()
         setupRestView()
@@ -166,6 +169,28 @@ class ExerciseActivity : AppCompatActivity(), TextToSpeech.OnInitListener {
 
     private fun speakOut(text: String) {
         tts?.let { tts!!.speak(text, TextToSpeech.QUEUE_FLUSH, null, "") }
+    }
+
+    override fun onBackPressed() {
+        customDialogForBackButton()
+    }
+
+    private fun customDialogForBackButton(){
+        val customDialog = Dialog(this)
+        val dialogBinding = DialogCustomBackConfirmationBinding.inflate(layoutInflater)
+        customDialog.setContentView(dialogBinding.root)
+        customDialog.setCanceledOnTouchOutside(false)
+
+        dialogBinding.yesBtn.setOnClickListener {
+            this@ExerciseActivity.finish()
+        }
+
+        dialogBinding.noBtn.setOnClickListener{
+            customDialog.dismiss()
+
+        }
+
+        customDialog.show()
     }
 
     override fun onDestroy() {

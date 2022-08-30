@@ -1,6 +1,5 @@
 package com.androstays.a7minuteworkout
 
-import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.androstays.a7minuteworkout.databinding.ActivityFinishBinding
