@@ -23,4 +23,7 @@
     <string name="weight_in_kgs">WEIGHT (in kgs)</string>
     <string name="calculate">CALCULATE</string>
     <string name="your_bmi">YOUR BMI</string>
+    <string name="validate_number_regex">^[0-9]+|[0-9]+[.]?[0-9]+</string>
+    <string name="metric_units">METRIC UNITS</string>
+    <string name="us_units">US UNITS</string>
 </resources>

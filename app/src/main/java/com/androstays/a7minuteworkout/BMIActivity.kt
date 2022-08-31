@@ -76,14 +76,14 @@ class BMIActivity : AppCompatActivity() {
     private fun vaidateMetricUnits(): Boolean {
         var isValid = true
         if (!Pattern.matches(
-                "^[0-9]+|[0-9]+[.]?[0-9]+",
+                getString(R.string.validate_number_regex),
                 binding?.etMetricUnitWeight?.text.toString()
             )
         ) {
             isValid = false
         }
         if (!Pattern.matches(
-                "^[0-9]+|[0-9]+[.]?[0-9]+",
+                getString(R.string.validate_number_regex),
                 binding?.etMetricUnitHeight?.text.toString()
             )
         ) {
