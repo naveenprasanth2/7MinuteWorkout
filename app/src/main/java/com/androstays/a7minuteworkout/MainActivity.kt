@@ -3,6 +3,7 @@ package com.androstays.a7minuteworkout
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.androstays.a7minuteworkout.databinding.ActivityBmiactivityBinding
 import com.androstays.a7minuteworkout.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
@@ -18,9 +19,14 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
+        binding?.flBMI?.setOnClickListener {
+            val intent = Intent(this, BMIActivity::class.java)
+            startActivity(intent)
+        }
+
     }
 
-   override fun onDestroy(){
+    override fun onDestroy() {
         super.onDestroy()
         binding = null
     }

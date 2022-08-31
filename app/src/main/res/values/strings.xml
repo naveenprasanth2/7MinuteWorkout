@@ -17,4 +17,10 @@
     <string name="yes">Yes</string>
     <string name="no">No</string>
     <string name="popupText">This will stop your workout. You\'ve come this far, are you sure you want to quit?</string>
+    <string name="bmi">BMI</string>
+    <string name="calculator">Calculator</string>
+    <string name="height_in_cms">HEIGHT (in cms)</string>
+    <string name="weight_in_kgs">WEIGHT (in kgs)</string>
+    <string name="calculate">CALCULATE</string>
+    <string name="your_bmi">YOUR BMI</string>
 </resources>
