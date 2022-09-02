@@ -42,7 +42,7 @@ class ExerciseActivity : AppCompatActivity(), TextToSpeech.OnInitListener {
             supportActionBar?.setDisplayHomeAsUpEnabled(true)
         }
         binding?.toolbarExercise?.setNavigationOnClickListener {
-           customDialogForBackButton()
+            customDialogForBackButton()
         }
 
         tts = TextToSpeech(this, this)
@@ -120,7 +120,7 @@ class ExerciseActivity : AppCompatActivity(), TextToSpeech.OnInitListener {
             }
 
             override fun onFinish() {
-                if (currentExercisePosition < exerciseList!!.size -1) {
+                if (currentExercisePosition < exerciseList!!.size - 1) {
                     exerciseList!![currentExercisePosition].setIsSelected(false)
                     exerciseList!![currentExercisePosition].setIsCompleted(true)
                     exerciseAdapter!!.notifyDataSetChanged()
@@ -175,7 +175,7 @@ class ExerciseActivity : AppCompatActivity(), TextToSpeech.OnInitListener {
         customDialogForBackButton()
     }
 
-    private fun customDialogForBackButton(){
+    private fun customDialogForBackButton() {
         val customDialog = Dialog(this)
         val dialogBinding = DialogCustomBackConfirmationBinding.inflate(layoutInflater)
         customDialog.setContentView(dialogBinding.root)
@@ -185,7 +185,7 @@ class ExerciseActivity : AppCompatActivity(), TextToSpeech.OnInitListener {
             this@ExerciseActivity.finish()
         }
 
-        dialogBinding.noBtn.setOnClickListener{
+        dialogBinding.noBtn.setOnClickListener {
             customDialog.dismiss()
 
         }

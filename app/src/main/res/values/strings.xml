@@ -14,8 +14,20 @@
     <string name="you_have_done_the_workout">You have done the workout!</string>
     <string name="finish">FINISH</string>
     <string name="are_you_sure">Are you sure?</string>
-    <string name="warning_text">This will stop your workout. You\'ve come this so far, are you sore you want to quit?</string>
     <string name="yes">Yes</string>
     <string name="no">No</string>
     <string name="popupText">This will stop your workout. You\'ve come this far, are you sure you want to quit?</string>
+    <string name="bmi">BMI</string>
+    <string name="calculator">Calculator</string>
+    <string name="height_in_cms">HEIGHT (in cms)</string>
+    <string name="weight_in_kgs">WEIGHT (in kgs)</string>
+    <string name="calculate">CALCULATE</string>
+    <string name="your_bmi">YOUR BMI</string>
+    <string name="validate_number_regex">^[.]{1}[0-9]+|[0-9]+|[0-9]+[.]?[0-9]+</string>
+    <string name="metric_units">METRIC UNITS</string>
+    <string name="us_units">US UNITS</string>
+    <string name="feet">Feet</string>
+    <string name="inch">Inch</string>
+    <string name="weight_in_pounds">Weight (in Pounds)</string>
+    <string name="history">History</string>
 </resources>
