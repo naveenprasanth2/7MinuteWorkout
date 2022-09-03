@@ -12,4 +12,5 @@ interface HistoryDao {
 
     @Query("select * from history_table")
     fun fetchAllDates(): Flow<List<HistoryEntity>>
+
 }
